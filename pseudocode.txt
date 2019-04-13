@@ -1,0 +1,63 @@
+Bamazon Pseudocode.
+
+Written by Alex Chalyy on 4/12/2019.
+
+Part 1:
+
+1.  Create bamazon.sql file
+
+    a.  Create a bamazon db.    DONE.
+
+    b.  Create a products table in bamazon db with: DONE.
+
+            item_id (unique id for each product)    DONE.
+
+            product_name (Name of product) DONE.
+
+            department_name DONE.
+
+            price (cost to customer) DONE.
+
+            stock_quantity (how much of the product is available in stores) DONE.
+
+    c.  Populate the database with 10 mock values. DONE.
+
+2.  Create bamazonCustomer.js file. DONE.
+
+    a.  Include package.json file.  DONE.
+
+    b.  Import mysql npm package. DONE.
+
+    c.  Import inquirer npm package. DONE.
+
+    d.  Make mysql connection to bamazon_db. DONE.
+
+    c.  When user runs bamazonCustomer.js in node:
+
+        i.   Dispaly all rows from products table with ids, names, and prices.
+
+        ii.  Store all of them in local variables.
+
+        iii.  Using inquirer package
+        
+              - prompt the user for id of the product (one of the rows) they would like to buy, and read input.
+
+                if input is not valid (wrong data type/does not exist), display validation message
+
+                else read in value and store it in a variable
+
+              - prompt the user of how many units of that items they want to buy
+
+                if input is not valid (wrong data type/negative), display validation message
+
+                else read in value and store it in a variable
+
+        iv.   If the quanity desired exceeds actual product stock_quantity
+
+                display "insufficient quantity!" on screen.
+
+              else update the quantity of product in db to whatever it was minus the items bought
+
+                   display the customer cost (quantity of times bought * price of an item)
+
+3.  Update the portfolio page to include the project in github.
