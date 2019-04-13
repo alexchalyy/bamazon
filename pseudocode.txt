@@ -60,4 +60,6 @@ Part 1:
 
                    display the customer cost (quantity of times bought * price of an item)
 
-3.  Update the portfolio page to include the project in github.
+3.  Update readme with functional description and screenshots.
+
+4.  Update the portfolio page to include the project in github.
