@@ -32,33 +32,39 @@ Part 1:
 
     d.  Make mysql connection to bamazon_db. DONE.
 
-    c.  When user runs bamazonCustomer.js in node:
+    e.  When user runs bamazonCustomer.js in node: DONE.
 
-        i.   Dispaly all rows from products table with ids, names, and prices.
+        While variable status is not "N" DONE
 
-        ii.  Store all of them in local variables.
+        i.   Dispaly all rows from products table with ids, names, and prices. DONE
 
-        iii.  Using inquirer package
+        ii.  Store all of them in local variables. DONE
+
+        iii.  Using inquirer package DONE
         
-              - prompt the user for id of the product (one of the rows) they would like to buy, and read input.
+              - prompt the user for id of the product (one of the rows) they would like to buy, and read input. DONE
 
-                if input is not valid (wrong data type/does not exist), display validation message
+                if input is not valid (wrong data type/does not exist), display validation message DONE
 
-                else read in value and store it in a variable
+                else read in value and store it in a variable DONE
 
-              - prompt the user of how many units of that items they want to buy
+              - prompt the user of how many units of that items they want to buy DONE
 
-                if input is not valid (wrong data type/negative), display validation message
+                if input is not valid (wrong data type/negative), display validation message DONE
 
-                else read in value and store it in a variable
+                else read in value and store it in a variable DONE
 
-        iv.   If the quanity desired exceeds actual product stock_quantity
+        iv.   If the quanity desired exceeds actual product stock_quantity DONE
 
-                display "insufficient quantity!" on screen.
+                display "insufficient quantity!" on screen. DONE
 
-              else update the quantity of product in db to whatever it was minus the items bought
+              else update the quantity of product in db to whatever it was minus the items bought DONE
 
-                   display the customer cost (quantity of times bought * price of an item)
+                   display the customer cost (quantity of times bought * price of an item) DONE
+
+        Prompt the user if they would like to perform another transaction, if they enter "Y" go to the beginning of step e, else quite node. DONE
+
+    f.  Close mysql connection. DONE.
 
 3.  Update readme with functional description and screenshots.
 
