@@ -2,7 +2,7 @@
 
 # Homework Description
 
-This program contacts product inventory database and displays the results as shown below including unique product id, product name, and product price. Afterwards the user is prompted to either quit, enter product id, or display inventory.
+This program contacts product inventory database and displays the results as shown below including unique product id, product name, department, and product price. Afterwards the user is prompted to either quit, enter product id, or display inventory.
 
 ![product inventory](images/display_inventory.PNG)
 
