@@ -4,7 +4,7 @@
 
 This program contacts product inventory database and displays the results as shown below including unique product id, product name, product price, and product quantity. Afterwards the user is prompted to either quit, enter product id, or display inventory.
 
-![product inventory](images/product_inventory.PNG)
+![product inventory](images/display_inventory.PNG)
 
 If the user chooses quit option, the program terminates as shown below.
 
