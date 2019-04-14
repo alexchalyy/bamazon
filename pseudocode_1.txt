@@ -1,4 +1,4 @@
-Bamazon Pseudocode.
+Bamazon Pseudocode 1.
 
 Written by Alex Chalyy on 4/12/2019.
 

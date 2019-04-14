@@ -81,7 +81,3 @@ INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("rubber ducks", "toys", 4.99, 25);
 
 SELECT * FROM products;
-
-UPDATE products
-SET stock_quantity = 10
-WHERE item_id = 1;

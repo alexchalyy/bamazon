@@ -146,11 +146,11 @@ function DisplayProducts() {
 
     db.query(query, function (err, res) {
         if (err) throw err;
-        console.log("\n\n  Product ID | Name                      | Price      | Quantity");
+        console.log("\n\n  Product ID | Name                      | Price       "); //| Quantity");
         for (var i = 0; i < res.length; i++) {
             console.log("  " + res[i].item_id + ReturnSpaces(res[i].item_id.toString(), 11) + "| " + res[i].product_name +
                 ReturnSpaces(res[i].product_name, 26) + "| " + res[i].price +
-                ReturnSpaces(res[i].price.toString(), 11) + "| " + res[i].stock_quantity);
+                ReturnSpaces(res[i].price.toString(), 11)); //+ "| " + res[i].stock_quantity);
             indexes.push(res[i].item_id);
             quantities.push(res[i].stock_quantity);
             prices.push(res[i].price);
