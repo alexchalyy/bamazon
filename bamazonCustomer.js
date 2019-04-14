@@ -5,7 +5,6 @@
 //  Those are packages that are used.
 
 const mysql = require("mysql");
-const Table = require("cli-table");
 const Inquirer = require("inquirer");
 var indexes = [];
 var quantities = [];
@@ -35,7 +34,6 @@ db.connect(function (err) {
     if (err) throw err;
     console.log("connected as id " + db.threadId);
     DisplayProducts();
-    Start();
 });
 
 //----------------------------------------------------------------------------
@@ -61,7 +59,6 @@ function Start() {
             } 
             else if (answer.action == "Display inventory")  {
                 DisplayProducts();
-                Start();
             } else  {
                 db.end();
                 console.log("Bye!");
@@ -158,7 +155,7 @@ function DisplayProducts() {
             quantities.push(res[i].stock_quantity);
             prices.push(res[i].price);
         }
-        console.log("\n\n\nPress any key for the next step.");
+        Start();
     });
 }
 
@@ -175,16 +172,3 @@ function ReturnSpaces(column, spaces) {
     }
     return space;
 }
-
-//----------------------------------------------------------------------------
-
-/*
-function ItemsForSale() {
-    db.query("SELECT * FROM products", function(error, res) {
-        var table = new Table({
-            head: ["item id", "product name", "department", "price", "quantity"],
-            colWidths: [10, 28, 22, 10, 10]
-        });
-
-    }
-} */
