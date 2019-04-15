@@ -18,13 +18,13 @@ Part 2:
 
 3.  If View Low Inventory is selected, display product id, name, department, price, and quantity for all rows in product table where quantity is less than 5. DONE
 
-4.  If Add to Inventory is selected.
+4.  If Add to Inventory is selected. DONE
 
-    a.  Ask the user to enter product id (until the user enters correct product id).
+    a.  Ask the user to enter product id (until the user enters correct product id). DONE
 
-    b.  Ask the user to enter product quantity to add (until the user enters correct product quantity).
+    b.  Ask the user to enter product quantity to add (until the user enters correct product quantity). DONE
 
-    c.  Update mysql db products table with correct product id by adding new product quantity to old product quantity.
+    c.  Update mysql db products table with correct product id by adding new product quantity to old product quantity. DONE
 
 5.  If user chooses Add new product option.
 

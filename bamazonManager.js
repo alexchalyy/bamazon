@@ -59,6 +59,9 @@
                 }
                 else if (answer.action == "View Products for Sale") {
                     DisplayProducts("");
+                }
+                else if (answer.action == "Add to Inventory") {
+                    EnterProductID();
                 } else {
                     db.end();
                     console.log("Bye!");
@@ -106,10 +109,6 @@
                 var a = answer.index - Math.floor(answer.index) === 0;
                 if (answer.index >= 1 && a) {
                     quantity = answer.index;
-                    if (quantity > quantities[index - 1]) {
-                        console.log("Insufficient quantity!");
-                        EnterQuantity();
-                    }
                     UpdateDB();
                 } else {
                     console.log("Incorrect input.");
@@ -124,14 +123,13 @@
     
         //  This function updates db with bought items and displays cost.
     
-        var new_quantity = (quantities[index - 1] - quantity).toString();
+        var new_quantity = (parseInt(quantities[index - 1]) + parseInt(quantity)).toString();
         var string_index = index.toString();
         var query = "UPDATE products SET stock_quantity = " + new_quantity + " WHERE item_id = " + string_index + ";"
     
         db.query(query, function (err, res) {
             if (err) throw err;
             var cost = prices[index - 1] * quantity;
-            console.log("Customer cost: $" + cost.toFixed(2));
             Start();
         });
     }
