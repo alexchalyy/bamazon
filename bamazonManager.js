@@ -31,7 +31,7 @@
     
         if (err) throw err;
         console.log("connected as id " + db.threadId);
-        DisplayProducts();
+        DisplayProducts("");
     });
     
     //----------------------------------------------------------------------------
@@ -54,11 +54,11 @@
                 ]
             })
             .then(function (answer) {
-                if (answer.action == "Enter product ID") {
-                    EnterProductID();
+                if (answer.action == "View Low Inventory") {
+                    DisplayProducts(" WHERE stock_quantity <= 5");
                 }
                 else if (answer.action == "View Products for Sale") {
-                    DisplayProducts();
+                    DisplayProducts("");
                 } else {
                     db.end();
                     console.log("Bye!");
@@ -138,11 +138,11 @@
     
     //----------------------------------------------------------------------------
     
-    function DisplayProducts(status) {
+    function DisplayProducts(append_query) {
     
         //  This function displays product id, name of product, and price from products table for every row.
     
-        var query = "SELECT * FROM products;";
+        var query = "SELECT * FROM products" + append_query + ";";
     
         db.query(query, function (err, res) {
             if (err) throw err;

@@ -16,7 +16,7 @@ Part 2:
 
 2.  If View Products for Sale option is selected, display product id, name, department, price, and quantity for every row in products table. DONE
 
-3.  If View Low Inventory is selected, display product id, name, department, price, and quantity for all rows in product table where quantity is less than 5.
+3.  If View Low Inventory is selected, display product id, name, department, price, and quantity for all rows in product table where quantity is less than 5. DONE
 
 4.  If Add to Inventory is selected.
 
