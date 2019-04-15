@@ -56,10 +56,10 @@ function Start() {
         .then(function (answer) {
             if (answer.action == "Enter product ID") {
                 EnterProductID();
-            } 
-            else if (answer.action == "Display inventory")  {
+            }
+            else if (answer.action == "Display inventory") {
                 DisplayProducts();
-            } else  {
+            } else {
                 db.end();
                 console.log("Bye!");
             }
@@ -138,7 +138,7 @@ function UpdateDB() {
 
 //----------------------------------------------------------------------------
 
-function DisplayProducts() {
+function DisplayProducts(status) {
 
     //  This function displays product id, name of product, and price from products table for every row.
 
@@ -149,7 +149,7 @@ function DisplayProducts() {
         console.log("\n\n  Product ID | Name                      | Department           | Price       "); //| Quantity");
         for (var i = 0; i < res.length; i++) {
             console.log("  " + res[i].item_id + ReturnSpaces(res[i].item_id.toString(), 11) + "| " + res[i].product_name +
-                ReturnSpaces(res[i].product_name, 26) + "| " + res[i].department_name + 
+                ReturnSpaces(res[i].product_name, 26) + "| " + res[i].department_name +
                 ReturnSpaces(res[i].department_name, 21) + "| " + res[i].price + ReturnSpaces(res[i].price.toString(), 11)); //+ "| " + res[i].stock_quantity);
             indexes.push(res[i].item_id);
             quantities.push(res[i].stock_quantity);

@@ -3,3 +3,39 @@ Bamazon Pseudocode 2.
 Written by Alex Chalyy on 4/14/2019.
 
 Part 2:
+
+1.  Connect mysql db (using mysql package). DONE
+
+2.  Ask user to enter one of the following options using inquirer package: DONE
+
+    - View Products for Sale DONE
+    - View Low Inventory DONE
+    - Add to Inventory DONE
+    - Add New Product DONE
+    - Quit DONE
+
+2.  If View Products for Sale option is selected, display product id, name, department, price, and quantity for every row in products table. DONE
+
+3.  If View Low Inventory is selected, display product id, name, department, price, and quantity for all rows in product table where quantity is less than 5.
+
+4.  If Add to Inventory is selected.
+
+    a.  Ask the user to enter product id (until the user enters correct product id).
+
+    b.  Ask the user to enter product quantity to add (until the user enters correct product quantity).
+
+    c.  Update mysql db products table with correct product id by adding new product quantity to old product quantity.
+
+5.  If user chooses Add new product option.
+
+    a. Ask the user to enter new product name (until user enters valid product name and name is not already present in db).
+
+    b. Ask the user to enter new product department (until user enters valid product department).
+
+    c. Ask the user to enter new product price (until user enters valid product price).
+
+    d. Ask the user to enter valid quantity (until user enters valid product quantity).
+
+    e. Add new row with infromation above into db (only if product name is unique).
+
+6.  If user chooses quit, close the db connection, and quit.
