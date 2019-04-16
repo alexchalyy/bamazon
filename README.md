@@ -44,7 +44,7 @@ If user chooses view low inventory, only products with quantities less then 5 ar
 
 If user chooses add to inventory option, user is asked for product id and how much he/she would like to add to existing product quantities. When the user enters valid values, the database is updated properly (shown below).
 
-![add quantity](images/manager_add_quanity.PNG)
+![add quantity](images/manager_add_quantity.PNG)
 
 If user chooses add new product option, user is asked to enter new unique product name, department name, price, and quantity. Afterwards, new product is added to database.
 
