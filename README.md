@@ -2,6 +2,8 @@
 
 # Homework Description
 
+# Customer View
+
 This program contacts product inventory database and displays the results as shown below including unique product id, product name, department, and product price. Afterwards the user is prompted to either quit, enter product id, or display inventory.
 
 ![product inventory](images/display_inventory.PNG)
@@ -25,6 +27,12 @@ Afterwards, total product cost is displayed database is updated, and user is aga
 ![update](images/update.PNG)
 
 Input validation is used everywhere.
+
+# Manager View
+
+In this part of homework, user has options to quit, view low inventory, view products for sale, add to inventory, and add new product.
+
+
 
 # Homework Creation Process
 

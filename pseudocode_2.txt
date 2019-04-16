@@ -26,16 +26,16 @@ Part 2:
 
     c.  Update mysql db products table with correct product id by adding new product quantity to old product quantity. DONE
 
-5.  If user chooses Add new product option.
+5.  If user chooses Add new product option. DONE
 
-    a. Ask the user to enter new product name (until user enters valid product name and name is not already present in db).
+    a. Ask the user to enter new product name (until user enters valid product name and name is not already present in db). DONE
 
-    b. Ask the user to enter new product department (until user enters valid product department).
+    b. Ask the user to enter new product department (until user enters valid product department). DONE
 
-    c. Ask the user to enter new product price (until user enters valid product price).
+    c. Ask the user to enter new product price (until user enters valid product price). DONE
 
-    d. Ask the user to enter valid quantity (until user enters valid product quantity).
+    d. Ask the user to enter valid quantity (until user enters valid product quantity). DONE
 
-    e. Add new row with infromation above into db (only if product name is unique).
+    e. Add new row with infromation above into db (only if product name is unique). DONE
 
-6.  If user chooses quit, close the db connection, and quit.
+6.  If user chooses quit, close the db connection, and quit. DONE
