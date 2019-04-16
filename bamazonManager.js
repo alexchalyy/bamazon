@@ -65,7 +65,7 @@ function Start() {
                 DisplayProducts("");
             }
             else if (answer.action == "Add to Inventory") {
-                EnterProductID();
+                EnterProductIDInventory();
             }
             else if (answer.action == "Add New Product") {
                 EnterNewProductName();
@@ -155,7 +155,6 @@ function EnterNewProductPrice() {
             }
             else {
                 new_product_price = parseFloat(answer.index).toString();
-                console.log(new_product_price);
                 EnterQuantity();
             }
         });
@@ -187,6 +186,54 @@ function EnterProductID() {
 
 //----------------------------------------------------------------------------
 
+function EnterProductIDInventory() {
+
+    //  This function prompts the user for the product id to enter.
+
+    Inquirer
+        .prompt({
+            name: "index",
+            type: "input",
+            message: "Enter product ID: "
+        })
+        .then(function (answer) {
+            var a = answer.index - Math.floor(answer.index) === 0;
+            if (answer.index >= 1 && answer.index <= indexes.length && a) {
+                index = answer.index;
+                EnterQuantityInventory();
+            } else {
+                console.log("Incorrect input.");
+                EnterProductIDInventory();
+            }
+        });
+}
+
+//----------------------------------------------------------------------------
+
+function EnterQuantityInventory() {
+
+    //  This function prompts the user for the quantity of item they would like to purchase.
+
+    Inquirer
+        .prompt({
+            name: "index",
+            type: "input",
+            message: "Enter product quantity: "
+        })
+        .then(function (answer) {
+            var a = answer.index - Math.floor(answer.index) === 0;
+            if (answer.index >= 1 && a) {
+                quantity = answer.index;
+                UpdateDB();
+            } else {
+                console.log("Incorrect input.");
+                EnterQuantityInventory();
+            }
+        });
+}
+
+//----------------------------------------------------------------------------
+
 function EnterQuantity() {
 
     //  This function prompts the user for the quantity of item they would like to purchase.
@@ -202,7 +249,6 @@ function EnterQuantity() {
             if (answer.index >= 1 && a) {
                 quantity = answer.index;
                 EnterNewProduct();
-                //                UpdateDB();
             } else {
                 console.log("Incorrect input.");
                 EnterQuantity();
@@ -253,6 +299,10 @@ function DisplayProducts(append_query) {
 
     db.query(query, function (err, res) {
         if (err) throw err;
+        indexes = [];
+        quantities = [];
+        prices = [];
+        names = [];
         console.log("\n\n  Product ID | Name                      | Department           | Price      | Quantity");
         for (var i = 0; i < res.length; i++) {
             console.log("  " + res[i].item_id + ReturnSpaces(res[i].item_id.toString(), 11) + "| " + res[i].product_name +
