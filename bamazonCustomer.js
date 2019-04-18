@@ -109,8 +109,9 @@ function EnterQuantity() {
                 if (quantity > quantities[index - 1]) {
                     console.log("Insufficient quantity!");
                     EnterQuantity();
+                } else  {
+                    UpdateDB();
                 }
-                UpdateDB();
             } else {
                 console.log("Incorrect input.");
                 EnterQuantity();
