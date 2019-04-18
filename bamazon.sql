@@ -80,4 +80,42 @@ VALUES ("tissues", "miscellaneous", 2.99, 25);
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("rubber ducks", "toys", 4.99, 25);
 
+/*-----------------------------------------------------------------------*/
+
+CREATE TABLE departments(
+	department_id INT AUTO_INCREMENT NOT NULL,
+	department_name VARCHAR(45) NOT NULL,
+	over_head_costs DECIMAL(10, 2) NOT NULL,
+    primary key(department_id)
+);
+
+/*-----------------------------------------------------------------------*/
+
+INSERT INTO departments(department_name, over_head_costs)
+VALUES ("toys", 100);
+
+/*-----------------------------------------------------------------------*/
+
+INSERT INTO departments(department_name, over_head_costs)
+VALUES ("miscellaneous", 0);
+
+/*-----------------------------------------------------------------------*/
+
+INSERT INTO departments(department_name, over_head_costs)
+VALUES ("medication", 14);
+
+/*-----------------------------------------------------------------------*/
+
+INSERT INTO departments(department_name, over_head_costs)
+VALUES ("food", 34);
+
+/*-----------------------------------------------------------------------*/
+
+INSERT INTO departments(department_name, over_head_costs)
+VALUES ("personal care", 34);
+
 SELECT * FROM products;
+
+SELECT * FROM departments;
+
+SELECT departmentProd.department_score_id
