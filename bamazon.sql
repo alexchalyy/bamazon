@@ -117,5 +117,3 @@ VALUES ("personal care", 34);
 SELECT * FROM products;
 
 SELECT * FROM departments;
-
-SELECT departmentProd.department_score_id

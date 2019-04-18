@@ -26,6 +26,10 @@ Afterwards, total product cost is displayed database is updated, and user is aga
 
 ![update](images/update.PNG)
 
+If the user enters product quantity that is greater than the one in database, "Insufficient quantity" message is displayed. and user is asked to enter quantity again, as shown below:
+
+![insufficient quantity](images/insufficient.PNG)
+
 Input validation is used everywhere.
 
 # Manager View
